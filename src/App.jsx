@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Send, Menu, X, MessageCircle, Phone, Mail, MapPin, Code, Smartphone, TrendingUp, Film, Palette, Briefcase, ChevronRight, Zap, Users, Award, Clock, Star, ArrowRight, Sparkles, Globe, Target, Rocket, Heart, TrendingDown } from 'lucide-react';
+import { Send, Menu, X, MessageCircle, Phone, Mail, MapPin, Code, Smartphone, TrendingUp, Film, Palette, Briefcase, ChevronRight, Zap, Users, Award, Clock, Star, ArrowRight, Sparkles, Globe, Target, Rocket, Heart } from 'lucide-react';
 
 export default function KeshriTechWebsite() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -278,25 +278,24 @@ export default function KeshriTechWebsite() {
         }
 
         :root {
-          --primary-gold: #D4AF37;
-          --primary-orange: #FF6B35;
-          --accent-blue: #0066FF;
-          --accent-green: #00D9A3;
-          --accent-purple: #7C3AED;
-          --accent-pink: #FF006E;
-          --dark-navy: #0F172A;
-          --darker-navy: #020617;
-          --charcoal: #1E293B;
-          --slate: #334155;
-          --light-gray: #F8FAFC;
-          --glow-gold: rgba(212, 175, 55, 0.5);
-          --glow-orange: rgba(255, 107, 53, 0.5);
-          --glow-blue: rgba(0, 102, 255, 0.4);
+          --premium-gold: #FFD700;
+          --rich-gold: #FDB913;
+          --deep-gold: #D4AF37;
+          --royal-purple: #6B46C1;
+          --luxury-purple: #8B5CF6;
+          --electric-blue: #0EA5E9;
+          --cyber-cyan: #06B6D4;
+          --emerald-green: #10B981;
+          --ruby-red: #EF4444;
+          --charcoal: #0F172A;
+          --midnight: #020617;
+          --slate-dark: #1E293B;
+          --slate-light: #334155;
         }
 
         body {
           font-family: 'Montserrat', 'Noto Sans Devanagari', sans-serif;
-          background: var(--darker-navy);
+          background: var(--midnight);
           color: #fff;
           overflow-x: hidden;
           -webkit-font-smoothing: antialiased;
@@ -307,7 +306,7 @@ export default function KeshriTechWebsite() {
           min-height: 100vh;
         }
 
-        /* Promotional Animated Background */
+        /* Premium Animated Background */
         .keshritech-website::before {
           content: '';
           position: fixed;
@@ -316,20 +315,20 @@ export default function KeshriTechWebsite() {
           width: 100%;
           height: 100%;
           background: 
-            radial-gradient(ellipse at 15% 20%, rgba(255, 107, 53, 0.15) 0%, transparent 50%),
-            radial-gradient(ellipse at 85% 80%, rgba(0, 102, 255, 0.15) 0%, transparent 50%),
-            radial-gradient(ellipse at 50% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
-            linear-gradient(135deg, var(--darker-navy) 0%, var(--dark-navy) 50%, var(--charcoal) 100%);
+            radial-gradient(ellipse at 15% 20%, rgba(255, 215, 0, 0.12) 0%, transparent 50%),
+            radial-gradient(ellipse at 85% 80%, rgba(139, 92, 246, 0.12) 0%, transparent 50%),
+            radial-gradient(ellipse at 50% 50%, rgba(14, 165, 233, 0.08) 0%, transparent 50%),
+            linear-gradient(135deg, var(--midnight) 0%, var(--charcoal) 50%, var(--slate-dark) 100%);
           z-index: -2;
-          animation: bgPulse 18s ease-in-out infinite;
+          animation: bgPulse 20s ease-in-out infinite;
         }
 
         @keyframes bgPulse {
           0%, 100% { opacity: 1; }
-          50% { opacity: 0.88; }
+          50% { opacity: 0.9; }
         }
 
-        /* Dynamic Grid */
+        /* Luxury Grid Pattern */
         .keshritech-website::after {
           content: '';
           position: fixed;
@@ -338,42 +337,36 @@ export default function KeshriTechWebsite() {
           width: 100%;
           height: 100%;
           background-image: 
-            linear-gradient(rgba(255, 107, 53, 0.04) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255, 107, 53, 0.04) 1px, transparent 1px);
-          background-size: 35px 35px;
+            linear-gradient(rgba(255, 215, 0, 0.03) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 215, 0, 0.03) 1px, transparent 1px);
+          background-size: 40px 40px;
           z-index: -1;
           pointer-events: none;
-          animation: gridMove 25s linear infinite;
+          animation: gridMove 30s linear infinite;
         }
 
         @keyframes gridMove {
           0% { transform: translate(0, 0); }
-          100% { transform: translate(35px, 35px); }
+          100% { transform: translate(40px, 40px); }
         }
 
-        /* Promotional Header */
+        /* Premium Header */
         .header {
           position: fixed;
           top: 0;
           left: 0;
           right: 0;
           z-index: 1000;
-          background: rgba(15, 23, 42, 0.9);
+          background: rgba(15, 23, 42, 0.95);
           backdrop-filter: blur(20px);
-          border-bottom: 2px solid rgba(255, 107, 53, 0.3);
+          border-bottom: 2px solid rgba(255, 215, 0, 0.2);
           animation: slideDown 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-          box-shadow: 0 8px 32px rgba(255, 107, 53, 0.2);
+          box-shadow: 0 8px 32px rgba(255, 215, 0, 0.15);
         }
 
         @keyframes slideDown {
-          from {
-            transform: translateY(-100%);
-            opacity: 0;
-          }
-          to {
-            transform: translateY(0);
-            opacity: 1;
-          }
+          from { transform: translateY(-100%); opacity: 0; }
+          to { transform: translateY(0); opacity: 1; }
         }
 
         .header-container {
@@ -387,21 +380,20 @@ export default function KeshriTechWebsite() {
 
         .logo {
           font-family: 'Playfair Display', serif;
-          font-size: 1.9rem;
+          font-size: 1.8rem;
           font-weight: 900;
-          background: linear-gradient(135deg, #FFD700, var(--primary-orange), #FF6B35);
+          background: linear-gradient(135deg, var(--premium-gold), var(--rich-gold), var(--luxury-purple));
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           animation: logoShine 3s ease-in-out infinite;
-          letter-spacing: 2px;
-          position: relative;
+          letter-spacing: 1px;
           cursor: pointer;
-          text-shadow: 0 0 30px var(--glow-orange);
+          text-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
         }
 
         @keyframes logoShine {
-          0%, 100% { filter: drop-shadow(0 0 15px var(--glow-orange)); }
-          50% { filter: drop-shadow(0 0 28px var(--glow-orange)); }
+          0%, 100% { filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.4)); }
+          50% { filter: drop-shadow(0 0 25px rgba(255, 215, 0, 0.6)); }
         }
 
         .nav-links {
@@ -414,7 +406,7 @@ export default function KeshriTechWebsite() {
           color: #fff;
           text-decoration: none;
           font-weight: 700;
-          font-size: 0.95rem;
+          font-size: 0.9rem;
           position: relative;
           transition: all 0.3s ease;
           letter-spacing: 0.5px;
@@ -429,14 +421,14 @@ export default function KeshriTechWebsite() {
           left: 50%;
           width: 0;
           height: 2px;
-          background: linear-gradient(90deg, transparent, var(--primary-orange), transparent);
+          background: linear-gradient(90deg, transparent, var(--premium-gold), transparent);
           transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
           transform: translateX(-50%);
-          box-shadow: 0 0 10px var(--glow-orange);
+          box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
         }
 
         .nav-links a:hover {
-          color: var(--primary-orange);
+          color: var(--premium-gold);
           transform: translateY(-2px);
         }
 
@@ -446,22 +438,23 @@ export default function KeshriTechWebsite() {
 
         .menu-toggle {
           display: none;
-          background: linear-gradient(135deg, var(--primary-orange), #FF8C42);
+          background: linear-gradient(135deg, var(--premium-gold), var(--rich-gold));
           border: none;
-          color: #fff;
+          color: var(--midnight);
           font-size: 1.5rem;
           cursor: pointer;
           padding: 0.6rem;
           border-radius: 8px;
           transition: all 0.3s ease;
-          box-shadow: 0 0 25px var(--glow-orange);
+          box-shadow: 0 0 25px rgba(255, 215, 0, 0.4);
+          font-weight: bold;
         }
 
         .menu-toggle:active {
           transform: scale(0.95);
         }
 
-        /* Promotional Hero */
+        /* Premium Hero Section */
         .hero {
           min-height: 100vh;
           display: flex;
@@ -486,42 +479,42 @@ export default function KeshriTechWebsite() {
         .shape {
           position: absolute;
           border-radius: 50%;
-          filter: blur(80px);
-          opacity: 0.22;
-          animation: shapeFloat 22s infinite;
+          filter: blur(100px);
+          opacity: 0.15;
+          animation: shapeFloat 25s infinite;
         }
 
         .shape-1 {
-          width: 450px;
-          height: 450px;
-          background: var(--primary-orange);
-          top: 8%;
+          width: 500px;
+          height: 500px;
+          background: var(--premium-gold);
+          top: 10%;
           left: 5%;
           animation-delay: 0s;
         }
 
         .shape-2 {
-          width: 550px;
-          height: 550px;
-          background: var(--accent-blue);
-          bottom: 8%;
+          width: 600px;
+          height: 600px;
+          background: var(--luxury-purple);
+          bottom: 10%;
           right: 5%;
-          animation-delay: 7s;
+          animation-delay: 8s;
         }
 
         .shape-3 {
-          width: 400px;
-          height: 400px;
-          background: var(--primary-gold);
+          width: 450px;
+          height: 450px;
+          background: var(--electric-blue);
           top: 50%;
           left: 50%;
-          animation-delay: 14s;
+          animation-delay: 16s;
         }
 
         @keyframes shapeFloat {
           0%, 100% { transform: translate(0, 0) rotate(0deg) scale(1); }
-          33% { transform: translate(45px, -45px) rotate(120deg) scale(1.12); }
-          66% { transform: translate(-45px, 45px) rotate(240deg) scale(0.88); }
+          33% { transform: translate(50px, -50px) rotate(120deg) scale(1.1); }
+          66% { transform: translate(-50px, 50px) rotate(240deg) scale(0.9); }
         }
 
         .hero-content {
@@ -531,14 +524,8 @@ export default function KeshriTechWebsite() {
         }
 
         @keyframes heroFadeIn {
-          from {
-            opacity: 0;
-            transform: translateY(80px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
+          from { opacity: 0; transform: translateY(80px); }
+          to { opacity: 1; transform: translateY(0); }
         }
 
         .hero-badge {
@@ -546,11 +533,11 @@ export default function KeshriTechWebsite() {
           align-items: center;
           gap: 0.6rem;
           padding: 0.7rem 2rem;
-          background: linear-gradient(135deg, rgba(255, 107, 53, 0.2), rgba(0, 102, 255, 0.2));
-          border: 2px solid var(--primary-orange);
+          background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(139, 92, 246, 0.15));
+          border: 2px solid var(--premium-gold);
           border-radius: 50px;
-          color: var(--primary-orange);
-          font-size: 0.95rem;
+          color: var(--premium-gold);
+          font-size: 0.9rem;
           font-weight: 800;
           margin-bottom: 2rem;
           animation: badgeGlow 2.5s ease-in-out infinite;
@@ -559,22 +546,22 @@ export default function KeshriTechWebsite() {
         }
 
         @keyframes badgeGlow {
-          0%, 100% { box-shadow: 0 0 25px var(--glow-orange); transform: scale(1); }
-          50% { box-shadow: 0 0 40px var(--glow-orange), 0 0 60px var(--glow-orange); transform: scale(1.05); }
+          0%, 100% { box-shadow: 0 0 25px rgba(255, 215, 0, 0.3); transform: scale(1); }
+          50% { box-shadow: 0 0 40px rgba(255, 215, 0, 0.5), 0 0 60px rgba(255, 215, 0, 0.3); transform: scale(1.05); }
         }
 
         .hero-title {
           font-family: 'Playfair Display', 'Noto Sans Devanagari', serif;
-          font-size: clamp(2.5rem, 7vw, 5.5rem);
+          font-size: clamp(2.2rem, 6vw, 5rem);
           font-weight: 900;
           margin-bottom: 1.5rem;
-          background: linear-gradient(135deg, #FFD700, var(--primary-orange), #FF8C42, var(--primary-orange));
+          background: linear-gradient(135deg, var(--premium-gold), var(--rich-gold), var(--luxury-purple));
           background-size: 300% 300%;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           animation: titleGradient 5s ease infinite;
           line-height: 1.15;
-          text-shadow: 0 0 40px var(--glow-orange);
+          text-shadow: 0 0 40px rgba(255, 215, 0, 0.3);
           min-height: 1.4em;
           transition: opacity 0.5s ease;
         }
@@ -585,24 +572,22 @@ export default function KeshriTechWebsite() {
         }
 
         .hero-subtitle {
-          font-size: clamp(1.15rem, 3vw, 1.8rem);
-          color: rgba(255, 255, 255, 0.92);
-          margin-bottom: 2rem;
+          font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+          color: rgba(255, 255, 255, 0.9);
+          margin-bottom: 1.5rem;
           font-weight: 500;
           line-height: 1.7;
           max-width: 850px;
           margin-left: auto;
           margin-right: auto;
-          animation: heroFadeIn 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.3s backwards;
         }
 
         .hero-subtitle-hindi {
-          font-size: clamp(1.05rem, 2.5vw, 1.5rem);
-          color: rgba(255, 255, 255, 0.85);
-          margin-bottom: 3.5rem;
+          font-size: clamp(1rem, 2vw, 1.4rem);
+          color: rgba(255, 255, 255, 0.8);
+          margin-bottom: 3rem;
           font-weight: 400;
           font-family: 'Noto Sans Devanagari', sans-serif;
-          animation: heroFadeIn 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.4s backwards;
         }
 
         .hero-buttons {
@@ -610,14 +595,13 @@ export default function KeshriTechWebsite() {
           gap: 1.5rem;
           justify-content: center;
           flex-wrap: wrap;
-          animation: heroFadeIn 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.6s backwards;
         }
 
         .btn {
-          padding: 1.2rem 3rem;
+          padding: 1.1rem 2.5rem;
           border: none;
           border-radius: 50px;
-          font-size: 1.1rem;
+          font-size: 1rem;
           font-weight: 800;
           cursor: pointer;
           transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -650,55 +634,54 @@ export default function KeshriTechWebsite() {
         }
 
         .btn-primary {
-          background: linear-gradient(135deg, var(--primary-orange), #FF8C42);
-          color: #fff;
-          box-shadow: 0 15px 40px var(--glow-orange);
+          background: linear-gradient(135deg, var(--premium-gold), var(--rich-gold));
+          color: var(--midnight);
+          box-shadow: 0 15px 40px rgba(255, 215, 0, 0.3);
           position: relative;
           z-index: 1;
         }
 
         .btn-primary:hover {
-          transform: translateY(-7px) scale(1.08);
-          box-shadow: 0 22px 50px var(--glow-orange);
+          transform: translateY(-5px) scale(1.05);
+          box-shadow: 0 20px 50px rgba(255, 215, 0, 0.5);
         }
 
         .btn-secondary {
           background: transparent;
-          color: var(--primary-orange);
-          border: 2px solid var(--primary-orange);
-          box-shadow: 0 0 25px rgba(255, 107, 53, 0.3);
+          color: var(--premium-gold);
+          border: 2px solid var(--premium-gold);
+          box-shadow: 0 0 25px rgba(255, 215, 0, 0.2);
         }
 
         .btn-secondary:hover {
-          background: var(--primary-orange);
-          color: #fff;
-          transform: translateY(-7px) scale(1.08);
-          box-shadow: 0 22px 50px var(--glow-orange);
+          background: var(--premium-gold);
+          color: var(--midnight);
+          transform: translateY(-5px) scale(1.05);
+          box-shadow: 0 20px 50px rgba(255, 215, 0, 0.5);
         }
 
-        /* Promotional Stats */
+        /* Premium Stats Section */
         .stats-section {
-          padding: 4.5rem 1.5rem;
-          background: linear-gradient(180deg, rgba(30, 41, 59, 0.45), transparent);
-          border-top: 2px solid rgba(255, 107, 53, 0.25);
-          border-bottom: 2px solid rgba(255, 107, 53, 0.25);
-          position: relative;
+          padding: 4rem 1.5rem;
+          background: linear-gradient(180deg, rgba(30, 41, 59, 0.4), transparent);
+          border-top: 2px solid rgba(255, 215, 0, 0.2);
+          border-bottom: 2px solid rgba(255, 215, 0, 0.2);
         }
 
         .stats-container {
           max-width: 1200px;
           margin: 0 auto;
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-          gap: 2.5rem;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          gap: 2rem;
         }
 
         .stat-item {
           text-align: center;
-          padding: 2.8rem 1.5rem;
+          padding: 2.5rem 1.5rem;
           background: linear-gradient(135deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.9));
           border-radius: 24px;
-          border: 2px solid rgba(255, 107, 53, 0.25);
+          border: 2px solid rgba(255, 215, 0, 0.2);
           transition: all 0.5s ease;
           animation: statFadeIn 1s ease-out backwards;
           position: relative;
@@ -712,7 +695,7 @@ export default function KeshriTechWebsite() {
           left: -100%;
           width: 100%;
           height: 100%;
-          background: linear-gradient(90deg, transparent, rgba(255, 107, 53, 0.15), transparent);
+          background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.1), transparent);
           transition: left 0.8s ease;
         }
 
@@ -721,9 +704,9 @@ export default function KeshriTechWebsite() {
         }
 
         .stat-item:hover {
-          transform: translateY(-15px) scale(1.08);
-          border-color: var(--primary-orange);
-          box-shadow: 0 28px 55px var(--glow-orange);
+          transform: translateY(-12px) scale(1.05);
+          border-color: var(--premium-gold);
+          box-shadow: 0 25px 50px rgba(255, 215, 0, 0.3);
         }
 
         .stat-item:nth-child(1) { animation-delay: 0.1s; }
@@ -732,41 +715,35 @@ export default function KeshriTechWebsite() {
         .stat-item:nth-child(4) { animation-delay: 0.4s; }
 
         @keyframes statFadeIn {
-          from {
-            opacity: 0;
-            transform: translateY(40px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
+          from { opacity: 0; transform: translateY(40px); }
+          to { opacity: 1; transform: translateY(0); }
         }
 
         .stat-icon {
-          width: 60px;
-          height: 60px;
-          margin: 0 auto 1.2rem;
-          color: var(--primary-orange);
-          filter: drop-shadow(0 0 20px var(--glow-orange));
+          width: 55px;
+          height: 55px;
+          margin: 0 auto 1rem;
+          color: var(--premium-gold);
+          filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.4));
           animation: iconFloat 3s ease-in-out infinite;
         }
 
         @keyframes iconFloat {
           0%, 100% { transform: translateY(0) rotate(0deg); }
-          50% { transform: translateY(-12px) rotate(5deg); }
+          50% { transform: translateY(-10px) rotate(5deg); }
         }
 
         .stat-number {
           font-family: 'Playfair Display', serif;
-          font-size: clamp(3.2rem, 6vw, 4.5rem);
-          color: var(--primary-orange);
+          font-size: clamp(2.8rem, 5vw, 4rem);
+          color: var(--premium-gold);
           margin-bottom: 0.5rem;
-          text-shadow: 0 0 30px var(--glow-orange);
+          text-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
           font-weight: 900;
         }
 
         .stat-label {
-          font-size: 1.05rem;
+          font-size: 1rem;
           color: rgba(255, 255, 255, 0.85);
           font-weight: 600;
           letter-spacing: 0.5px;
@@ -774,24 +751,24 @@ export default function KeshriTechWebsite() {
         }
 
         .stat-label-hindi {
-          font-size: 0.95rem;
+          font-size: 0.9rem;
           color: rgba(255, 255, 255, 0.7);
           font-family: 'Noto Sans Devanagari', sans-serif;
         }
 
         /* Section Styles */
         .section {
-          padding: 6rem 1.5rem;
+          padding: 5rem 1.5rem;
           max-width: 1400px;
           margin: 0 auto;
         }
 
         .section-title {
           font-family: 'Playfair Display', serif;
-          font-size: clamp(2.8rem, 6vw, 4.8rem);
+          font-size: clamp(2.5rem, 5vw, 4.5rem);
           text-align: center;
           margin-bottom: 1rem;
-          background: linear-gradient(135deg, var(--primary-orange), #FF8C42);
+          background: linear-gradient(135deg, var(--premium-gold), var(--rich-gold));
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           font-weight: 900;
@@ -803,19 +780,19 @@ export default function KeshriTechWebsite() {
         .section-title::after {
           content: '';
           display: block;
-          width: 130px;
-          height: 5px;
-          background: linear-gradient(90deg, transparent, var(--primary-orange), transparent);
+          width: 120px;
+          height: 4px;
+          background: linear-gradient(90deg, transparent, var(--premium-gold), transparent);
           margin: 1.5rem auto 0;
           border-radius: 3px;
-          box-shadow: 0 0 25px var(--glow-orange);
+          box-shadow: 0 0 25px rgba(255, 215, 0, 0.4);
         }
 
         .section-subtitle {
           text-align: center;
-          font-size: clamp(1.1rem, 2vw, 1.5rem);
+          font-size: clamp(1rem, 2vw, 1.4rem);
           color: rgba(255, 255, 255, 0.85);
-          margin-bottom: 2rem;
+          margin-bottom: 1.5rem;
           max-width: 800px;
           margin-left: auto;
           margin-right: auto;
@@ -825,28 +802,28 @@ export default function KeshriTechWebsite() {
 
         .section-subtitle-hindi {
           text-align: center;
-          font-size: clamp(1rem, 2vw, 1.3rem);
+          font-size: clamp(0.95rem, 1.8vw, 1.2rem);
           color: rgba(255, 255, 255, 0.75);
-          margin-bottom: 4.5rem;
+          margin-bottom: 4rem;
           max-width: 750px;
           margin-left: auto;
           margin-right: auto;
           font-family: 'Noto Sans Devanagari', sans-serif;
         }
 
-        /* Services Grid */
+        /* Services Grid - Responsive */
         .services-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-          gap: 2.5rem;
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+          gap: 2rem;
         }
 
         .service-card {
           background: linear-gradient(135deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.9));
-          border: 2px solid rgba(255, 107, 53, 0.25);
-          border-radius: 28px;
-          padding: 3rem 2.5rem;
-          transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+          border: 2px solid rgba(255, 215, 0, 0.2);
+          border-radius: 24px;
+          padding: 2.5rem 2rem;
+          transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
           position: relative;
           overflow: hidden;
           cursor: pointer;
@@ -859,7 +836,7 @@ export default function KeshriTechWebsite() {
           left: -50%;
           width: 200%;
           height: 200%;
-          background: radial-gradient(circle, rgba(255, 107, 53, 0.18) 0%, transparent 70%);
+          background: radial-gradient(circle, rgba(255, 215, 0, 0.15) 0%, transparent 70%);
           opacity: 0;
           transition: opacity 0.6s ease;
         }
@@ -870,57 +847,51 @@ export default function KeshriTechWebsite() {
         }
 
         @keyframes serviceRipple {
-          from {
-            transform: scale(0);
-            opacity: 1;
-          }
-          to {
-            transform: scale(1);
-            opacity: 0;
-          }
+          from { transform: scale(0); opacity: 1; }
+          to { transform: scale(1); opacity: 0; }
         }
 
         .service-card:hover {
-          transform: translateY(-20px) scale(1.03);
-          border-color: var(--primary-orange);
-          box-shadow: 0 35px 70px var(--glow-orange);
+          transform: translateY(-15px) scale(1.02);
+          border-color: var(--premium-gold);
+          box-shadow: 0 30px 60px rgba(255, 215, 0, 0.25);
         }
 
         .service-icon {
-          width: 70px;
-          height: 70px;
-          color: var(--primary-orange);
-          margin-bottom: 2rem;
-          filter: drop-shadow(0 0 18px var(--glow-orange));
+          width: 60px;
+          height: 60px;
+          color: var(--premium-gold);
+          margin-bottom: 1.5rem;
+          filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.4));
           transition: all 0.5s ease;
         }
 
         .service-card:hover .service-icon {
-          transform: scale(1.3) rotate(15deg);
-          filter: drop-shadow(0 0 30px var(--glow-orange));
+          transform: scale(1.2) rotate(10deg);
+          filter: drop-shadow(0 0 25px rgba(255, 215, 0, 0.6));
         }
 
         .service-title {
-          font-size: 1.7rem;
+          font-size: 1.5rem;
           font-weight: 800;
           margin-bottom: 0.5rem;
-          color: var(--primary-orange);
+          color: var(--premium-gold);
           font-family: 'Playfair Display', serif;
         }
 
         .service-title-hindi {
-          font-size: 1.3rem;
+          font-size: 1.2rem;
           font-weight: 600;
-          margin-bottom: 1.2rem;
+          margin-bottom: 1rem;
           color: rgba(255, 255, 255, 0.7);
           font-family: 'Noto Sans Devanagari', sans-serif;
         }
 
         .service-desc {
           color: rgba(255, 255, 255, 0.8);
-          font-size: 1.05rem;
-          line-height: 1.7;
-          margin-bottom: 2rem;
+          font-size: 1rem;
+          line-height: 1.6;
+          margin-bottom: 1.5rem;
         }
 
         .service-features {
@@ -929,34 +900,34 @@ export default function KeshriTechWebsite() {
         }
 
         .service-features li {
-          padding: 0.7rem 0;
+          padding: 0.6rem 0;
           color: rgba(255, 255, 255, 0.7);
-          font-size: 0.98rem;
+          font-size: 0.95rem;
           display: flex;
           align-items: center;
-          gap: 0.8rem;
+          gap: 0.7rem;
         }
 
         .service-features li::before {
           content: '✓';
-          color: var(--accent-green);
+          color: var(--emerald-green);
           font-weight: bold;
-          font-size: 1.4rem;
+          font-size: 1.3rem;
         }
 
-        /* Projects Grid */
+        /* Projects Grid - Responsive */
         .projects-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-          gap: 2.5rem;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 2rem;
         }
 
         .project-card {
           background: linear-gradient(135deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.9));
-          border: 2px solid rgba(0, 102, 255, 0.3);
-          border-radius: 28px;
-          padding: 2.8rem;
-          transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+          border: 2px solid rgba(139, 92, 246, 0.3);
+          border-radius: 24px;
+          padding: 2.5rem;
+          transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
           position: relative;
           overflow: hidden;
           cursor: pointer;
@@ -968,8 +939,8 @@ export default function KeshriTechWebsite() {
           bottom: 0;
           left: 0;
           width: 100%;
-          height: 5px;
-          background: linear-gradient(90deg, var(--primary-orange), var(--accent-blue));
+          height: 4px;
+          background: linear-gradient(90deg, var(--premium-gold), var(--luxury-purple));
           transform: scaleX(0);
           transition: transform 0.6s ease;
         }
@@ -979,13 +950,13 @@ export default function KeshriTechWebsite() {
         }
 
         .project-card:hover {
-          transform: translateY(-18px) scale(1.03);
-          border-color: var(--accent-blue);
-          box-shadow: 0 28px 60px var(--glow-blue);
+          transform: translateY(-15px) scale(1.02);
+          border-color: var(--luxury-purple);
+          box-shadow: 0 25px 55px rgba(139, 92, 246, 0.25);
         }
 
         .project-image {
-          font-size: 5rem;
+          font-size: 4.5rem;
           margin-bottom: 1.5rem;
           display: block;
           animation: projectFloat 4s ease-in-out infinite;
@@ -993,26 +964,26 @@ export default function KeshriTechWebsite() {
 
         @keyframes projectFloat {
           0%, 100% { transform: translateY(0) rotate(0deg); }
-          50% { transform: translateY(-15px) rotate(10deg); }
+          50% { transform: translateY(-12px) rotate(8deg); }
         }
 
         .project-name {
-          font-size: 1.7rem;
+          font-size: 1.5rem;
           font-weight: 800;
           margin-bottom: 0.5rem;
-          color: var(--accent-blue);
+          color: var(--luxury-purple);
           font-family: 'Playfair Display', serif;
         }
 
         .project-name-hindi {
-          font-size: 1.2rem;
+          font-size: 1.1rem;
           color: rgba(255, 255, 255, 0.65);
           margin-bottom: 0.8rem;
           font-family: 'Noto Sans Devanagari', sans-serif;
         }
 
         .project-category {
-          font-size: 0.92rem;
+          font-size: 0.9rem;
           color: rgba(255, 255, 255, 0.6);
           margin-bottom: 1rem;
           text-transform: uppercase;
@@ -1022,83 +993,83 @@ export default function KeshriTechWebsite() {
 
         .project-description {
           color: rgba(255, 255, 255, 0.75);
-          font-size: 1rem;
-          line-height: 1.7;
+          font-size: 0.95rem;
+          line-height: 1.6;
           margin-bottom: 1rem;
         }
 
         .project-desc-hindi {
           color: rgba(255, 255, 255, 0.65);
-          font-size: 0.95rem;
-          margin-bottom: 1.2rem;
+          font-size: 0.9rem;
+          margin-bottom: 1rem;
           font-family: 'Noto Sans Devanagari', sans-serif;
         }
 
         .project-tech {
-          font-size: 0.9rem;
-          color: var(--primary-orange);
-          background: rgba(255, 107, 53, 0.15);
-          padding: 0.5rem 1.3rem;
+          font-size: 0.85rem;
+          color: var(--premium-gold);
+          background: rgba(255, 215, 0, 0.12);
+          padding: 0.5rem 1.2rem;
           border-radius: 25px;
           display: inline-block;
           margin-right: 0.8rem;
           margin-top: 0.8rem;
-          border: 1px solid rgba(255, 107, 53, 0.3);
+          border: 1px solid rgba(255, 215, 0, 0.3);
           font-weight: 700;
         }
 
         .project-result {
-          font-size: 0.9rem;
-          color: var(--accent-green);
-          background: rgba(0, 217, 163, 0.15);
-          padding: 0.5rem 1.3rem;
+          font-size: 0.85rem;
+          color: var(--emerald-green);
+          background: rgba(16, 185, 129, 0.12);
+          padding: 0.5rem 1.2rem;
           border-radius: 25px;
           display: inline-block;
           margin-top: 0.8rem;
-          border: 1px solid rgba(0, 217, 163, 0.3);
+          border: 1px solid rgba(16, 185, 129, 0.3);
           font-weight: 700;
         }
 
-        /* Why Choose Us */
+        /* Why Choose Us - Responsive */
         .why-choose-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-          gap: 2.5rem;
-          margin-top: 3.5rem;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 2rem;
+          margin-top: 3rem;
         }
 
         .why-card {
           background: linear-gradient(135deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.9));
-          border: 2px solid rgba(255, 107, 53, 0.25);
-          border-radius: 24px;
-          padding: 2.5rem;
+          border: 2px solid rgba(255, 215, 0, 0.2);
+          border-radius: 20px;
+          padding: 2rem;
           text-align: center;
           transition: all 0.5s ease;
         }
 
         .why-card:hover {
-          transform: translateY(-12px);
-          border-color: var(--primary-orange);
-          box-shadow: 0 25px 50px var(--glow-orange);
+          transform: translateY(-10px);
+          border-color: var(--premium-gold);
+          box-shadow: 0 20px 45px rgba(255, 215, 0, 0.25);
         }
 
         .why-icon {
-          width: 65px;
-          height: 65px;
+          width: 55px;
+          height: 55px;
           margin: 0 auto 1.5rem;
-          color: var(--primary-orange);
-          filter: drop-shadow(0 0 15px var(--glow-orange));
+          color: var(--premium-gold);
+          filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.4));
         }
 
         .why-title {
-          font-size: 1.5rem;
+          font-size: 1.3rem;
           font-weight: 700;
-          color: var(--primary-orange);
+          color: var(--premium-gold);
           margin-bottom: 0.5rem;
         }
 
         .why-title-hindi {
-          font-size: 1.2rem;
+          font-size: 1.1rem;
           color: rgba(255, 255, 255, 0.7);
           margin-bottom: 1rem;
           font-family: 'Noto Sans Devanagari', sans-serif;
@@ -1106,62 +1077,62 @@ export default function KeshriTechWebsite() {
 
         .why-desc {
           color: rgba(255, 255, 255, 0.75);
-          font-size: 1rem;
+          font-size: 0.95rem;
           line-height: 1.6;
         }
 
-        /* Process Section */
+        /* Process Grid - Responsive */
         .process-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-          gap: 2.5rem;
-          margin-top: 3.5rem;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 2rem;
+          margin-top: 3rem;
         }
 
         .process-step {
           background: linear-gradient(135deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.9));
-          border: 2px solid rgba(255, 107, 53, 0.25);
-          border-radius: 28px;
-          padding: 2.8rem;
+          border: 2px solid rgba(255, 215, 0, 0.2);
+          border-radius: 24px;
+          padding: 2.5rem;
           text-align: center;
           transition: all 0.5s ease;
           position: relative;
         }
 
         .process-step:hover {
-          transform: translateY(-15px);
-          border-color: var(--primary-orange);
-          box-shadow: 0 28px 55px var(--glow-orange);
+          transform: translateY(-12px);
+          border-color: var(--premium-gold);
+          box-shadow: 0 25px 50px rgba(255, 215, 0, 0.25);
         }
 
         .process-icon {
-          width: 65px;
-          height: 65px;
+          width: 55px;
+          height: 55px;
           margin: 0 auto 1.5rem;
-          color: var(--primary-orange);
-          filter: drop-shadow(0 0 18px var(--glow-orange));
+          color: var(--premium-gold);
+          filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.4));
         }
 
         .process-number {
           font-family: 'Playfair Display', serif;
-          font-size: 3.8rem;
+          font-size: 3.5rem;
           font-weight: 900;
-          background: linear-gradient(135deg, var(--primary-orange), #FF8C42);
+          background: linear-gradient(135deg, var(--premium-gold), var(--rich-gold));
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           margin-bottom: 1rem;
         }
 
         .process-title {
-          font-size: 1.7rem;
+          font-size: 1.5rem;
           font-weight: 700;
-          color: var(--primary-orange);
+          color: var(--premium-gold);
           margin-bottom: 0.5rem;
           font-family: 'Noto Sans Devanagari', serif;
         }
 
         .process-title-eng {
-          font-size: 1.3rem;
+          font-size: 1.2rem;
           font-weight: 600;
           color: rgba(255, 255, 255, 0.7);
           margin-bottom: 1rem;
@@ -1169,153 +1140,153 @@ export default function KeshriTechWebsite() {
 
         .process-desc {
           color: rgba(255, 255, 255, 0.75);
-          font-size: 1rem;
-          line-height: 1.7;
+          font-size: 0.95rem;
+          line-height: 1.6;
         }
 
-        /* Testimonials */
+        /* Testimonials - Responsive */
         .testimonials-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-          gap: 2.5rem;
-          margin-top: 3.5rem;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 2rem;
+          margin-top: 3rem;
         }
 
         .testimonial-card {
           background: linear-gradient(135deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.9));
-          border: 2px solid rgba(255, 107, 53, 0.25);
-          border-radius: 28px;
-          padding: 2.8rem;
+          border: 2px solid rgba(255, 215, 0, 0.2);
+          border-radius: 24px;
+          padding: 2.5rem;
           transition: all 0.5s ease;
           position: relative;
         }
 
         .testimonial-card:hover {
-          transform: translateY(-15px);
-          border-color: var(--primary-orange);
-          box-shadow: 0 28px 55px var(--glow-orange);
+          transform: translateY(-12px);
+          border-color: var(--premium-gold);
+          box-shadow: 0 25px 50px rgba(255, 215, 0, 0.25);
         }
 
         .testimonial-rating {
           display: flex;
           gap: 0.5rem;
           margin-bottom: 1.5rem;
-          color: var(--primary-gold);
-          font-size: 1.4rem;
+          color: var(--premium-gold);
+          font-size: 1.3rem;
         }
 
         .testimonial-text {
           color: rgba(255, 255, 255, 0.88);
-          font-size: 1.08rem;
-          line-height: 1.85;
+          font-size: 1.05rem;
+          line-height: 1.8;
           margin-bottom: 2rem;
           font-style: italic;
         }
 
         .testimonial-author {
           font-weight: 700;
-          color: var(--primary-orange);
-          font-size: 1.2rem;
+          color: var(--premium-gold);
+          font-size: 1.15rem;
           font-family: 'Noto Sans Devanagari', sans-serif;
         }
 
         .testimonial-author-eng {
-          font-size: 1rem;
+          font-size: 0.95rem;
           color: rgba(255, 255, 255, 0.65);
           margin-top: 0.3rem;
         }
 
         .testimonial-company {
           color: rgba(255, 255, 255, 0.65);
-          font-size: 0.98rem;
+          font-size: 0.9rem;
           margin-top: 0.5rem;
         }
 
-        /* About Section */
+        /* About Section - Responsive */
         .about-content {
           display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 5rem;
+          grid-template-columns: 1fr;
+          gap: 4rem;
           align-items: center;
         }
 
         .about-text h3 {
           font-family: 'Playfair Display', serif;
-          font-size: 3rem;
-          color: var(--primary-orange);
+          font-size: clamp(2rem, 4vw, 2.8rem);
+          color: var(--premium-gold);
           margin-bottom: 2rem;
           line-height: 1.2;
         }
 
         .about-text p {
-          font-size: 1.18rem;
-          line-height: 1.9;
+          font-size: 1.1rem;
+          line-height: 1.8;
           color: rgba(255, 255, 255, 0.88);
           margin-bottom: 2rem;
         }
 
         .founder-info {
-          margin-top: 2.8rem;
-          padding: 2.8rem;
-          background: linear-gradient(135deg, rgba(255, 107, 53, 0.12), rgba(0, 102, 255, 0.12));
-          border-left: 4px solid var(--primary-orange);
+          margin-top: 2.5rem;
+          padding: 2.5rem;
+          background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(139, 92, 246, 0.1));
+          border-left: 4px solid var(--premium-gold);
           border-radius: 16px;
         }
 
         .founder-name {
-          font-size: 2.2rem;
+          font-size: 2rem;
           font-weight: 800;
-          color: var(--primary-orange);
+          color: var(--premium-gold);
           margin-bottom: 0.5rem;
           font-family: 'Playfair Display', serif;
         }
 
         .founder-title {
           color: rgba(255, 255, 255, 0.75);
-          font-size: 1.2rem;
-          margin-bottom: 1.3rem;
+          font-size: 1.15rem;
+          margin-bottom: 1.2rem;
           font-weight: 600;
         }
 
         .founder-description {
           color: rgba(255, 255, 255, 0.78);
-          font-size: 1.08rem;
-          line-height: 1.75;
+          font-size: 1.05rem;
+          line-height: 1.7;
         }
 
         .team-image {
           width: 100%;
-          height: 580px;
-          background: linear-gradient(135deg, rgba(255, 107, 53, 0.28), rgba(0, 102, 255, 0.28));
-          border-radius: 28px;
-          border: 2px solid rgba(255, 107, 53, 0.35);
+          height: 500px;
+          background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(139, 92, 246, 0.2));
+          border-radius: 24px;
+          border: 2px solid rgba(255, 215, 0, 0.3);
           display: flex;
           align-items: center;
           justify-content: center;
-          font-size: 1.4rem;
+          font-size: 1.3rem;
           color: rgba(255, 255, 255, 0.65);
           position: relative;
           overflow: hidden;
-          box-shadow: 0 28px 75px var(--glow-orange);
+          box-shadow: 0 25px 70px rgba(255, 215, 0, 0.2);
           transition: all 0.5s ease;
         }
 
         .team-image:hover {
-          transform: scale(1.03);
-          box-shadow: 0 35px 85px var(--glow-orange);
+          transform: scale(1.02);
+          box-shadow: 0 30px 80px rgba(255, 215, 0, 0.3);
         }
 
         .team-image::before {
           content: '👥';
-          font-size: 11rem;
-          opacity: 0.28;
+          font-size: 10rem;
+          opacity: 0.25;
           position: absolute;
           animation: teamPulse 4s ease-in-out infinite;
         }
 
         @keyframes teamPulse {
           0%, 100% { transform: scale(1); }
-          50% { transform: scale(1.18); }
+          50% { transform: scale(1.15); }
         }
 
         .team-image-text {
@@ -1323,55 +1294,55 @@ export default function KeshriTechWebsite() {
           z-index: 1;
           font-family: 'Playfair Display', serif;
           font-weight: 700;
-          font-size: 2rem;
+          font-size: 1.8rem;
         }
 
-        /* Contact Section */
+        /* Contact Section - Responsive */
         .contact-container {
           display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 5rem;
+          grid-template-columns: 1fr;
+          gap: 4rem;
         }
 
         .contact-info h3 {
           font-family: 'Playfair Display', serif;
-          font-size: 3rem;
-          color: var(--primary-orange);
-          margin-bottom: 2.8rem;
+          font-size: clamp(2rem, 4vw, 2.8rem);
+          color: var(--premium-gold);
+          margin-bottom: 2.5rem;
         }
 
         .contact-item {
           display: flex;
           align-items: center;
-          gap: 1.3rem;
-          margin-bottom: 2.2rem;
-          font-size: 1.18rem;
-          padding: 1.3rem;
-          background: rgba(255, 107, 53, 0.1);
+          gap: 1.2rem;
+          margin-bottom: 2rem;
+          font-size: 1.1rem;
+          padding: 1.2rem;
+          background: rgba(255, 215, 0, 0.08);
           border-radius: 14px;
-          border-left: 4px solid var(--primary-orange);
+          border-left: 4px solid var(--premium-gold);
           transition: all 0.4s ease;
         }
 
         .contact-item:hover {
-          transform: translateX(15px);
-          background: rgba(255, 107, 53, 0.18);
-          box-shadow: 0 10px 30px rgba(255, 107, 53, 0.25);
+          transform: translateX(12px);
+          background: rgba(255, 215, 0, 0.15);
+          box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2);
         }
 
         .contact-item svg {
-          color: var(--primary-orange);
-          width: 32px;
-          height: 32px;
+          color: var(--premium-gold);
+          width: 28px;
+          height: 28px;
           flex-shrink: 0;
         }
 
         .contact-form {
           background: linear-gradient(135deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.9));
-          border: 2px solid rgba(255, 107, 53, 0.25);
-          border-radius: 28px;
-          padding: 3.2rem;
-          box-shadow: 0 18px 55px rgba(255, 107, 53, 0.18);
+          border: 2px solid rgba(255, 215, 0, 0.2);
+          border-radius: 24px;
+          padding: 3rem;
+          box-shadow: 0 15px 50px rgba(255, 215, 0, 0.15);
         }
 
         .form-group {
@@ -1380,10 +1351,10 @@ export default function KeshriTechWebsite() {
 
         .form-group label {
           display: block;
-          margin-bottom: 0.9rem;
-          color: var(--primary-orange);
+          margin-bottom: 0.8rem;
+          color: var(--premium-gold);
           font-weight: 700;
-          font-size: 1.08rem;
+          font-size: 1.05rem;
           letter-spacing: 0.5px;
         }
 
@@ -1391,12 +1362,12 @@ export default function KeshriTechWebsite() {
         .form-group select,
         .form-group textarea {
           width: 100%;
-          padding: 1.2rem 1.4rem;
+          padding: 1.1rem 1.3rem;
           background: rgba(15, 23, 42, 0.7);
-          border: 2px solid rgba(255, 107, 53, 0.3);
-          border-radius: 14px;
+          border: 2px solid rgba(255, 215, 0, 0.25);
+          border-radius: 12px;
           color: #fff;
-          font-size: 1.08rem;
+          font-size: 1.05rem;
           font-family: 'Montserrat', sans-serif;
           transition: all 0.3s ease;
         }
@@ -1405,22 +1376,22 @@ export default function KeshriTechWebsite() {
         .form-group select:focus,
         .form-group textarea:focus {
           outline: none;
-          border-color: var(--primary-orange);
-          box-shadow: 0 0 28px var(--glow-orange);
+          border-color: var(--premium-gold);
+          box-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
           background: rgba(15, 23, 42, 0.85);
           transform: translateY(-2px);
         }
 
         .form-group textarea {
           resize: vertical;
-          min-height: 150px;
+          min-height: 140px;
         }
 
         /* Footer */
         .footer {
-          background: var(--darker-navy);
-          border-top: 2px solid rgba(255, 107, 53, 0.25);
-          padding: 4rem 1.5rem;
+          background: var(--midnight);
+          border-top: 2px solid rgba(255, 215, 0, 0.2);
+          padding: 3.5rem 1.5rem;
           text-align: center;
         }
 
@@ -1431,18 +1402,18 @@ export default function KeshriTechWebsite() {
 
         .footer-text {
           color: rgba(255, 255, 255, 0.7);
-          font-size: 1.08rem;
+          font-size: 1.05rem;
           margin-bottom: 1rem;
         }
 
         .footer-love {
-          color: var(--accent-pink);
+          color: var(--ruby-red);
           animation: heartBeat 1.8s ease-in-out infinite;
         }
 
         @keyframes heartBeat {
           0%, 100% { transform: scale(1); }
-          50% { transform: scale(1.3); }
+          50% { transform: scale(1.25); }
         }
 
         /* Chat Widget */
@@ -1454,192 +1425,183 @@ export default function KeshriTechWebsite() {
         }
 
         .chat-toggle {
-          width: 75px;
-          height: 75px;
+          width: 70px;
+          height: 70px;
           border-radius: 50%;
-          background: linear-gradient(135deg, var(--primary-orange), #FF8C42);
+          background: linear-gradient(135deg, var(--premium-gold), var(--rich-gold));
           border: none;
-          color: #fff;
-          font-size: 2.2rem;
+          color: var(--midnight);
+          font-size: 2rem;
           cursor: pointer;
-          box-shadow: 0 15px 40px var(--glow-orange);
+          box-shadow: 0 15px 40px rgba(255, 215, 0, 0.4);
           transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
           display: flex;
           align-items: center;
           justify-content: center;
           animation: chatPulse 3s ease-in-out infinite;
+          font-weight: bold;
         }
 
         @keyframes chatPulse {
-          0%, 100% { box-shadow: 0 15px 40px var(--glow-orange); }
-          50% { box-shadow: 0 15px 50px var(--glow-orange), 0 0 0 22px rgba(255, 107, 53, 0.18); }
+          0%, 100% { box-shadow: 0 15px 40px rgba(255, 215, 0, 0.4); }
+          50% { box-shadow: 0 15px 50px rgba(255, 215, 0, 0.6), 0 0 0 20px rgba(255, 215, 0, 0.15); }
         }
 
         .chat-toggle:hover {
-          transform: scale(1.25) rotate(15deg);
-          box-shadow: 0 20px 55px var(--glow-orange);
+          transform: scale(1.2) rotate(12deg);
+          box-shadow: 0 20px 55px rgba(255, 215, 0, 0.6);
         }
 
         .chat-window {
           position: fixed;
-          bottom: 130px;
+          bottom: 120px;
           right: 2rem;
-          width: min(500px, calc(100vw - 2rem));
-          height: min(700px, calc(100vh - 170px));
+          width: min(480px, calc(100vw - 2rem));
+          height: min(650px, calc(100vh - 160px));
           background: linear-gradient(135deg, rgba(30, 41, 59, 0.98), rgba(15, 23, 42, 0.98));
-          border: 2px solid rgba(255, 107, 53, 0.35);
-          border-radius: 28px;
+          border: 2px solid rgba(255, 215, 0, 0.3);
+          border-radius: 24px;
           display: flex;
           flex-direction: column;
-          box-shadow: 0 28px 75px rgba(0, 0, 0, 0.75);
+          box-shadow: 0 25px 70px rgba(0, 0, 0, 0.7);
           animation: chatSlideUp 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-          backdrop-filter: blur(25px);
+          backdrop-filter: blur(20px);
         }
 
         @keyframes chatSlideUp {
-          from {
-            opacity: 0;
-            transform: translateY(45px) scale(0.9);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0) scale(1);
-          }
+          from { opacity: 0; transform: translateY(40px) scale(0.9); }
+          to { opacity: 1; transform: translateY(0) scale(1); }
         }
 
         .chat-header {
-          padding: 2rem;
-          background: linear-gradient(135deg, var(--primary-orange), #FF8C42);
-          border-radius: 28px 28px 0 0;
-          color: #fff;
+          padding: 1.8rem;
+          background: linear-gradient(135deg, var(--premium-gold), var(--rich-gold));
+          border-radius: 24px 24px 0 0;
+          color: var(--midnight);
           display: flex;
           justify-content: space-between;
           align-items: center;
-          box-shadow: 0 10px 30px var(--glow-orange);
+          box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
         }
 
         .chat-header h3 {
           font-family: 'Playfair Display', serif;
-          font-size: 1.5rem;
+          font-size: 1.4rem;
           font-weight: 900;
         }
 
         .chat-close {
-          background: rgba(255, 255, 255, 0.25);
+          background: rgba(0, 0, 0, 0.2);
           border: none;
-          color: #fff;
-          font-size: 1.7rem;
+          color: var(--midnight);
+          font-size: 1.6rem;
           cursor: pointer;
-          width: 40px;
-          height: 40px;
+          width: 38px;
+          height: 38px;
           border-radius: 50%;
           display: flex;
           align-items: center;
           justify-content: center;
           transition: all 0.3s ease;
+          font-weight: bold;
         }
 
         .chat-close:hover {
-          background: rgba(255, 255, 255, 0.35);
+          background: rgba(0, 0, 0, 0.3);
           transform: rotate(90deg);
         }
 
         .chat-messages {
           flex: 1;
           overflow-y: auto;
-          padding: 2rem;
+          padding: 1.8rem;
           display: flex;
           flex-direction: column;
-          gap: 1.3rem;
+          gap: 1.2rem;
         }
 
         .chat-messages::-webkit-scrollbar {
-          width: 8px;
+          width: 7px;
         }
 
         .chat-messages::-webkit-scrollbar-thumb {
-          background: var(--primary-orange);
+          background: var(--premium-gold);
           border-radius: 10px;
         }
 
         .chat-message {
-          padding: 1.2rem 1.5rem;
-          border-radius: 20px;
+          padding: 1.1rem 1.4rem;
+          border-radius: 18px;
           max-width: 85%;
           animation: messageSlide 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
           word-wrap: break-word;
         }
 
         @keyframes messageSlide {
-          from {
-            opacity: 0;
-            transform: translateY(22px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
         }
 
         .chat-message.user {
-          background: linear-gradient(135deg, var(--primary-orange), #FF8C42);
-          color: #fff;
+          background: linear-gradient(135deg, var(--premium-gold), var(--rich-gold));
+          color: var(--midnight);
           align-self: flex-end;
-          box-shadow: 0 8px 22px var(--glow-orange);
+          box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);
           font-weight: 600;
         }
 
         .chat-message.assistant {
           background: rgba(30, 41, 59, 0.95);
           color: #fff;
-          border: 1px solid rgba(255, 107, 53, 0.25);
+          border: 1px solid rgba(255, 215, 0, 0.2);
           align-self: flex-start;
         }
 
         .chat-input-container {
-          padding: 1.5rem;
-          border-top: 2px solid rgba(255, 107, 53, 0.25);
+          padding: 1.4rem;
+          border-top: 2px solid rgba(255, 215, 0, 0.2);
           display: flex;
-          gap: 1.2rem;
+          gap: 1.1rem;
           background: rgba(30, 41, 59, 0.6);
-          border-radius: 0 0 28px 28px;
+          border-radius: 0 0 24px 24px;
         }
 
         .chat-input {
           flex: 1;
-          padding: 1.2rem;
+          padding: 1.1rem;
           background: rgba(15, 23, 42, 0.85);
-          border: 2px solid rgba(255, 107, 53, 0.3);
-          border-radius: 16px;
+          border: 2px solid rgba(255, 215, 0, 0.25);
+          border-radius: 14px;
           color: #fff;
           font-family: 'Montserrat', sans-serif;
-          font-size: 1.08rem;
+          font-size: 1.05rem;
           transition: all 0.3s ease;
         }
 
         .chat-input:focus {
           outline: none;
-          border-color: var(--primary-orange);
-          box-shadow: 0 0 22px var(--glow-orange);
+          border-color: var(--premium-gold);
+          box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
         }
 
         .chat-send {
-          padding: 1.2rem 2rem;
-          background: linear-gradient(135deg, var(--primary-orange), #FF8C42);
+          padding: 1.1rem 1.8rem;
+          background: linear-gradient(135deg, var(--premium-gold), var(--rich-gold));
           border: none;
-          border-radius: 16px;
-          color: #fff;
+          border-radius: 14px;
+          color: var(--midnight);
           cursor: pointer;
           transition: all 0.3s ease;
           display: flex;
           align-items: center;
           justify-content: center;
-          box-shadow: 0 8px 22px var(--glow-orange);
+          box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);
+          font-weight: bold;
         }
 
         .chat-send:hover {
-          transform: scale(1.15);
-          box-shadow: 0 12px 28px var(--glow-orange);
+          transform: scale(1.12);
+          box-shadow: 0 10px 25px rgba(255, 215, 0, 0.5);
         }
 
         .chat-send:disabled {
@@ -1657,15 +1619,15 @@ export default function KeshriTechWebsite() {
         }
 
         .whatsapp-btn {
-          width: 75px;
-          height: 75px;
+          width: 70px;
+          height: 70px;
           border-radius: 50%;
           background: linear-gradient(135deg, #25D366, #128C7E);
           border: none;
           color: white;
-          font-size: 2.4rem;
+          font-size: 2.2rem;
           cursor: pointer;
-          box-shadow: 0 15px 40px rgba(37, 211, 102, 0.55);
+          box-shadow: 0 15px 40px rgba(37, 211, 102, 0.5);
           transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
           display: flex;
           align-items: center;
@@ -1674,13 +1636,13 @@ export default function KeshriTechWebsite() {
         }
 
         @keyframes whatsappPulse {
-          0%, 100% { box-shadow: 0 15px 40px rgba(37, 211, 102, 0.55); }
-          50% { box-shadow: 0 15px 50px rgba(37, 211, 102, 0.75), 0 0 0 22px rgba(37, 211, 102, 0.18); }
+          0%, 100% { box-shadow: 0 15px 40px rgba(37, 211, 102, 0.5); }
+          50% { box-shadow: 0 15px 50px rgba(37, 211, 102, 0.7), 0 0 0 20px rgba(37, 211, 102, 0.15); }
         }
 
         .whatsapp-btn:hover {
-          transform: scale(1.25) rotate(-15deg);
-          box-shadow: 0 20px 55px rgba(37, 211, 102, 0.75);
+          transform: scale(1.2) rotate(-12deg);
+          box-shadow: 0 20px 55px rgba(37, 211, 102, 0.7);
         }
 
         /* Loading Animation */
@@ -1693,9 +1655,9 @@ export default function KeshriTechWebsite() {
         }
 
         .loading-dot {
-          width: 12px;
-          height: 12px;
-          background: var(--primary-orange);
+          width: 11px;
+          height: 11px;
+          background: var(--premium-gold);
           border-radius: 50%;
           animation: dotPulse 1.6s ease-in-out infinite;
         }
@@ -1706,7 +1668,7 @@ export default function KeshriTechWebsite() {
 
         @keyframes dotPulse {
           0%, 100% { opacity: 0.3; transform: scale(0.8); }
-          50% { opacity: 1; transform: scale(1.35); }
+          50% { opacity: 1; transform: scale(1.3); }
         }
 
         /* Mobile Menu */
@@ -1717,12 +1679,12 @@ export default function KeshriTechWebsite() {
           width: 100%;
           height: 100vh;
           background: rgba(15, 23, 42, 0.98);
-          backdrop-filter: blur(25px);
+          backdrop-filter: blur(20px);
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          gap: 2.8rem;
+          gap: 2.5rem;
           z-index: 999;
           animation: menuFadeIn 0.5s ease-out;
         }
@@ -1735,9 +1697,9 @@ export default function KeshriTechWebsite() {
         .mobile-menu a {
           color: #fff;
           text-decoration: none;
-          font-size: 2.4rem;
+          font-size: 2.2rem;
           font-weight: 800;
-          letter-spacing: 2px;
+          letter-spacing: 1.5px;
           transition: all 0.3s ease;
           position: relative;
           text-transform: uppercase;
@@ -1746,24 +1708,34 @@ export default function KeshriTechWebsite() {
         .mobile-menu a::after {
           content: '';
           position: absolute;
-          bottom: -10px;
+          bottom: -8px;
           left: 0;
           width: 0;
-          height: 4px;
-          background: var(--primary-orange);
+          height: 3px;
+          background: var(--premium-gold);
           transition: width 0.3s ease;
         }
 
         .mobile-menu a:hover {
-          color: var(--primary-orange);
-          transform: translateX(18px);
+          color: var(--premium-gold);
+          transform: translateX(15px);
         }
 
         .mobile-menu a:hover::after {
           width: 100%;
         }
 
-        /* Responsive Design */
+        /* Enhanced Responsive Design */
+        @media (min-width: 769px) {
+          .about-content {
+            grid-template-columns: 1fr 1fr;
+          }
+
+          .contact-container {
+            grid-template-columns: 1fr 1fr;
+          }
+        }
+
         @media (max-width: 968px) {
           .nav-links {
             display: none;
@@ -1771,16 +1743,6 @@ export default function KeshriTechWebsite() {
 
           .menu-toggle {
             display: block;
-          }
-
-          .about-content,
-          .contact-container {
-            grid-template-columns: 1fr;
-            gap: 3rem;
-          }
-
-          .team-image {
-            height: 420px;
           }
 
           .services-grid,
@@ -1798,24 +1760,28 @@ export default function KeshriTechWebsite() {
           .section {
             padding: 4rem 1.5rem;
           }
+
+          .team-image {
+            height: 400px;
+          }
         }
 
         @media (max-width: 640px) {
           .hero {
-            padding: 7rem 1rem 3rem;
+            padding: 6.5rem 1rem 3rem;
           }
 
           .hero-badge {
-            font-size: 0.82rem;
-            padding: 0.6rem 1.4rem;
+            font-size: 0.8rem;
+            padding: 0.6rem 1.3rem;
           }
 
           .hero-title {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
           }
 
           .hero-subtitle {
-            font-size: 1.15rem;
+            font-size: 1.1rem;
           }
 
           .hero-buttons {
@@ -1823,20 +1789,20 @@ export default function KeshriTechWebsite() {
           }
 
           .btn {
-            padding: 1.1rem 2.2rem;
-            font-size: 1rem;
+            padding: 1rem 2rem;
+            font-size: 0.95rem;
           }
 
           .section-title {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
           }
 
           .chat-window {
             width: calc(100vw - 1rem);
             right: 0.5rem;
             left: 0.5rem;
-            bottom: 110px;
-            height: calc(100vh - 140px);
+            bottom: 105px;
+            height: calc(100vh - 130px);
           }
 
           .whatsapp-float {
@@ -1851,18 +1817,18 @@ export default function KeshriTechWebsite() {
 
           .whatsapp-btn,
           .chat-toggle {
-            width: 65px;
-            height: 65px;
-            font-size: 1.8rem;
+            width: 62px;
+            height: 62px;
+            font-size: 1.7rem;
           }
 
           .stats-container {
             grid-template-columns: 1fr;
-            gap: 2rem;
+            gap: 1.5rem;
           }
 
           .stat-item {
-            padding: 2.2rem 1.3rem;
+            padding: 2rem 1.2rem;
           }
 
           .service-card,
@@ -1870,50 +1836,53 @@ export default function KeshriTechWebsite() {
           .testimonial-card,
           .process-step,
           .why-card {
-            padding: 2.2rem 1.8rem;
+            padding: 2rem 1.5rem;
           }
 
           .about-text h3 {
-            font-size: 2.4rem;
+            font-size: 2rem;
           }
 
           .contact-info h3 {
-            font-size: 2.4rem;
+            font-size: 2rem;
           }
 
           .contact-form {
-            padding: 2.5rem 2rem;
+            padding: 2.2rem 1.8rem;
           }
 
           .founder-info {
-            padding: 2.2rem;
+            padding: 2rem;
+          }
+
+          .team-image {
+            height: 350px;
           }
         }
 
         /* Extra Polish */
         ::selection {
-          background: var(--primary-orange);
-          color: #fff;
+          background: var(--premium-gold);
+          color: var(--midnight);
         }
 
         ::-webkit-scrollbar {
-          width: 12px;
+          width: 11px;
         }
 
         ::-webkit-scrollbar-track {
-          background: var(--darker-navy);
+          background: var(--midnight);
         }
 
         ::-webkit-scrollbar-thumb {
-          background: linear-gradient(180deg, var(--primary-orange), #FF8C42);
+          background: linear-gradient(180deg, var(--premium-gold), var(--rich-gold));
           border-radius: 10px;
         }
 
         ::-webkit-scrollbar-thumb:hover {
-          background: linear-gradient(180deg, #FF8C42, var(--primary-orange));
+          background: linear-gradient(180deg, var(--rich-gold), var(--premium-gold));
         }
 
-        /* Smooth Scrolling */
         html {
           scroll-behavior: smooth;
         }
@@ -1958,7 +1927,7 @@ export default function KeshriTechWebsite() {
         </div>
         <div className="hero-content">
           <div className="hero-badge">
-            <Sparkles size={20} />
+            <Sparkles size={18} />
             <span>50+ PROJECTS COMPLETE ✅</span>
           </div>
           <h1 className="hero-title" key={currentTextIndex}>
@@ -2136,9 +2105,7 @@ export default function KeshriTechWebsite() {
             </div>
           </div>
           <div className="team-image">
-            <img src="/hero.jpg" alt="Our Exceptional Team"               className="team-hero" onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = '/team-hero.svg'; }}             />
-
-            <span className="team-image-text"></span>
+            <span className="team-image-text">Our Team</span>
           </div>
         </div>
       </section>
@@ -2271,7 +2238,7 @@ export default function KeshriTechWebsite() {
                 disabled={isLoading || !userMessage.trim()}
                 aria-label="Message Bhejein"
               >
-                <Send size={26} />
+                <Send size={24} />
               </button>
             </div>
           </div>
@@ -2280,7 +2247,3 @@ export default function KeshriTechWebsite() {
     </div>
   );
 }
-
-
-
-
