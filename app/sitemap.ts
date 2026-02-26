@@ -3,7 +3,7 @@ import { services } from "@/data/services";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://keshritechsolution.com";
-  const staticRoutes = ["", "/services", "/portfolio", "/about", "/contact"];
+  const staticRoutes = ["", "/services", "/portfolio", "/career", "/about", "/contact"];
   const serviceRoutes = services.map((service) => `/services/${service.slug}`);
   const routes = [...staticRoutes, ...serviceRoutes];
 
