@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "../styles/animations.css";
+
+:root {
+  --background: 247 248 255;
+  --foreground: 12 18 34;
+  --muted: 92 106 134;
+  --card: 255 255 255;
+}
+
+.dark {
+  --background: 10 13 23;
+  --foreground: 238 241 248;
+  --muted: 152 163 186;
+  --card: 21 28 42;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: radial-gradient(circle at 20% 10%, rgba(95, 139, 255, 0.12), transparent 35%),
+    radial-gradient(circle at 85% 80%, rgba(124, 77, 255, 0.1), transparent 30%),
+    rgb(var(--background));
+  color: rgb(var(--foreground));
+}
+
+.glass {
+  @apply border border-white/20 bg-white/65 shadow-glass backdrop-blur-xl dark:border-white/10 dark:bg-slate-900/45;
+}
+
+.container-px {
+  @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+.section-space {
+  @apply py-16 sm:py-20 lg:py-24;
+}
+
+.section-title {
+  @apply text-3xl font-bold tracking-tight sm:text-4xl;
+}
+
+.section-subtitle {
+  @apply mt-3 max-w-2xl text-sm text-slate-600 dark:text-slate-300 sm:text-base;
+}
