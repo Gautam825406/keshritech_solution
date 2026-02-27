@@ -38,10 +38,17 @@ export function Navbar() {
           <Button variant="ghost" className="px-3" onClick={toggleTheme} aria-label="Toggle theme">
             {theme === "light" ? <Moon className="h-4 w-4" /> : <Sun className="h-4 w-4" />}
           </Button>
+          <Link href="/career">
+            <Button variant="secondary">Career</Button>
+          </Link>
           <Link href="/contact">
             <Button>Get a Quote</Button>
           </Link>
         </div>
+
+        <Link href="/career" className="text-sm font-medium text-brand-600 md:hidden">
+          Career
+        </Link>
 
         <button
           className="inline-flex rounded-xl p-2 md:hidden"

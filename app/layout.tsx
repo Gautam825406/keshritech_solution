@@ -4,9 +4,12 @@ import dynamic from "next/dynamic";
 import "./globals.css";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { ToastProvider } from "@/components/providers/ToastProvider";
-import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { DEFAULT_OG_IMAGE, SITE_URL, localBusinessJsonLd } from "@/lib/seo";
+
+const Navbar = dynamic(() => import("@/components/layout/Navbar").then((module) => module.Navbar), {
+  ssr: false,
+});
 
 const FloatingWhatsApp = dynamic(() => import("@/components/global/FloatingWhatsApp").then((module) => module.FloatingWhatsApp), {
   ssr: false,
